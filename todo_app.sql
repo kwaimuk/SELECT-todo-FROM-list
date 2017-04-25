@@ -1,9 +1,9 @@
 DROP USER IF EXISTS michael ;
 
 CREATE USER michael
-WITH ENCRYPTED PASSWORD 'stonebreaker'
+WITH ENCRYPTED PASSWORD 'stonebreaker';
 
-DROP DATABASE IF EXISTS todo_app ;
+DROP DATABASE IF EXISTS todo_app;
 
 CREATE DATABASE todo_app;
 
@@ -57,25 +57,24 @@ VALUES ('mistake 2', 'another test entry');
 INSERT INTO tasks (title, description)
 VALUES ('mistake 3', 'another test entry');
 --21
-SELECT title,
+SELECT title
 FROM tasks
 WHERE title LIKE '%mistake%';
 --22
-DELETE title
-FROM tasks
+DELETE FROM tasks
 WHERE title = 'mistake 1';
 --23
 SELECT title, description
 FROM tasks
-WHERE title like '%mistake%';
+WHERE title LIKE '%mistake%';
 --24
-DELETE title
-FROM tasks
+DELETE FROM tasks
 WHERE title LIKE '%mistake%';
 --25
 SELECT *
 FROM tasks
 ORDER BY title ASC;
+
 
 
 
